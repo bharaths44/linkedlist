@@ -17,7 +17,6 @@ void main()
    	struct timeval t1;
    	float elapsed;
 	struct node *head=NULL,*pos=NULL,*tail=NULL;
-	long *a;
 	int ch,entry,i=0,flag;
 	while (1)
 	{
@@ -31,7 +30,6 @@ void main()
 				printf("\nEnter number of data :");
 				scanf("%d",&entry);
 				gettimeofday(&t0, NULL);
-				a=(long *)malloc(sizeof(long)*entry);
 				if(head==NULL)
 				{
 					head=(struct node*)malloc(sizeof(struct node));
@@ -42,7 +40,6 @@ void main()
 				
 				for(i=0;i<entry-1;i++)
 				{
-					a=(long *)malloc(sizeof(long)*entry);
 					tail->next=(struct node*)malloc(sizeof(struct node));
 					tail=tail->next;
 					tail->data=rand()%100;
